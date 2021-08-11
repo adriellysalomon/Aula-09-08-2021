@@ -1,22 +1,34 @@
 programa {
 	funcao inicio() {
-		real valorA, valorB
-		caracter operacao
+		real valorA, valorB, resultado
+		cadeia operacao
+		escreva ("----- CALCULADORA -----", "\n")
 		
-		
-
-		escreva ("Digite o primeiro Valor")
+		escreva ("Digite um valor: ")
 		leia(valorA)
 		
-		escreva ("Digite o segundo valor")
+		escreva ("Digite mais um valor: ")
 		leia(valorB)
 		
-		escreva ("Digite a operação a realizar. Ex: +,-,*,/")
+		escreva ("Qual operação deseja realizar?(Ex:+,-,*,/): ")
 		leia(operacao)
 		
-		caso  (valorA + valorB) ou (valorA - valorB) ou (valorA * valorB) ou (valorA / valorB) { 
-		escreva ("Resultado:") , resultado
-        }
+		se (operacao == "+")  { 
+		    resultado = valorA + valorB
+		escreva ("Resultado:", resultado) 
+		
+		} senao se (operacao == "-")  { 
+		    resultado = valorA - valorB
+		escreva ("Resultado:", resultado) 
+		
+		} senao se (operacao == "*")  { 
+		    resultado = valorA * valorB
+		escreva ("Resultado:", resultado) 
+		
+		} senao se (operacao == "/")  { 
+		    resultado = valorA / valorB
+		    
+		escreva ("Resultado:", resultado) 
 		
 	}
 	
